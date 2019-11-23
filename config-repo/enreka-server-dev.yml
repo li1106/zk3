@@ -1,0 +1,23 @@
+server:
+  port: 8080
+spring:
+  application:
+#    name: enreka-server  #自己定义的名字
+
+eureka:
+  instance:
+    hostname: localhost   #  注册中心页面显示的微服务名
+  client:
+    register-with-eureka: true  #是否将自己作为客户端注册到注册中心上
+    fetch-registry: false #是否从注册中心获取到注册信息
+    service-url:
+      defaultZone: http://localhost:8080/eureka   #连接注册中心
+#spring:
+#  application:
+#    name: eureka-server
+#  cloud:
+#    config:
+#      uri: http://localhost:7001
+#      profile: dev #环境名称
+#      label: master #分支
+

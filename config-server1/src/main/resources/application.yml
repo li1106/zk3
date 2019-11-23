@@ -5,5 +5,5 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/li1106/config-helloworld
+          uri: https://github.com/li1106/zk3
           search-paths: config-repo

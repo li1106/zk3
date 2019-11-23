@@ -2,7 +2,7 @@ server:
   port: 8080
 spring:
   application:
-#    name: enreka-server  #自己定义的名字
+#    name: enreka-server  #自己定义的
 
 eureka:
   instance:

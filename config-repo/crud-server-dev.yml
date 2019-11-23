@@ -26,7 +26,7 @@ spring:
 #  mapper-locations: classpath:mapper/*.xml
 eureka:
   client:
-    fetch-registry: true   #从注册中心拉出注册列表
+    fetch-registry: true   #从注册中心拉出注册列表11
     service-url:
       defaultZone: http://localhost:8080/eureka
 logging:

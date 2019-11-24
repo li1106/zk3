@@ -33,6 +33,6 @@ logging:
   file: d:/log/good-springboot.log
   level:
     com.start.mapper: debug
-file:
-  path: F:\local\image
-  domain: http://127.0.0.1:8083/
+#file:
+#  path: F:\local\image
+#  domain: http://127.0.0.1:8083/

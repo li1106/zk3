@@ -14,10 +14,10 @@ import java.util.UUID;
 @CrossOrigin
 @RestController
 public class UploadController {
-//    @Value("${file.domain}")
-    private String fileDomain="http://127.0.0.1:8083/";
-//    @Value("${file.path}")
-    private String filePath="F:\\local\\image";
+    @Value("${file.domain}")
+    private String fileDomain;   //="http://127.0.0.1:8083/"
+    @Value("${file.path}")
+    private String filePath;   //="F:\\local\\image"
 
     @PostMapping("/upload")
     public Object upload(@RequestParam(name = "file")MultipartFile file){

@@ -34,5 +34,5 @@ logging:
   level:
     com.start.mapper: debug
 file:
-  path: F:\\local\\image
+  path: F:\\local\\image\\
   domain: http://127.0.0.1:8083/

@@ -28,6 +28,9 @@ public class UploadController {
         String fileName = UUID.randomUUID()+".jpg";
 //        文件保存地址
         File destPath = new File(filePath + fileName);
+        System.out.println(destPath+":是文件");
+        System.out.println(fileDomain+":fileDomain");
+        System.out.println(filePath+":filePath");
 //        文件上传
         try {
             file.transferTo(destPath);

@@ -21,6 +21,7 @@ public class UploadController {
 
     @PostMapping("/upload")
     public void upload(@RequestParam(name = "file")MultipartFile file){
+        System.out.println(file.getOriginalFilename()+":是文件名称");
         Map<String,Object> map = new HashMap<>();
         map.put("result",true);
 //        文件名

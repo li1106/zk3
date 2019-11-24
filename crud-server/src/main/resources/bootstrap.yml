@@ -6,6 +6,6 @@ spring:
       uri: http://localhost:7001
       profile: dev #环境名称
       label: master
-file:
-  path: F:\local\image
-  domain: http://127.0.0.1:8083/
+#file:
+#  path: F:\local\image
+#  domain: http://127.0.0.1:8083/

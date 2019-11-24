@@ -20,7 +20,7 @@ public class UploadController {
     private String filePath="F:\\local\\image";
 
     @PostMapping("/upload")
-    public void upload(@RequestParam(name = "file")MultipartFile file){
+    public Object upload(@RequestParam(name = "file")MultipartFile file){
         System.out.println(file.getOriginalFilename()+":是文件名称");
         Map<String,Object> map = new HashMap<>();
         map.put("result",true);
@@ -36,6 +36,8 @@ public class UploadController {
             map.put("imgUrl",fileDomain+fileName);
         } catch (IOException e) {
             e.printStackTrace();
+            return map;
         }
+        return map;
     }
 }

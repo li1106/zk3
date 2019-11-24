@@ -1,36 +1,25 @@
 server:
-  port: 8084
+  port: 9999
+  #servlet:
+  #  context-path: /apollo/
 spring:
   application:
-#    name: zuul-server
+#    name: gateway-server
+    #getaway
+  cloud:
+    gateway:
+      routes:
+        - id : gateway-server
+          uri: lb://gateway-server
+          order: 0
+          predicates:
+            - Path=/**
+          filters:
+            - StripPrefix=0
+
 eureka:
   client:
-    fetch-registry: true
+    fetch-registry: true   #从注册中心拉出注册列表
     service-url:
       defaultZone: http://localhost:8080/eureka
 
-zuul:
-  max:
-    host:
-      connections: 500
-  #请求头
-  prefix: /api
-  #不去掉所有前缀
-  strip-prefix: true
-  #自定义访问微服务的访问路径
-  routes:  #路由
-    user-routes:
-      path: /consumer/**
-      serviceId: crud-server
-  #      strip-prefix: false
-
-  #忽略
-  ignored-services: '*'
-  sensitive-headers:
-
-#可以查看网关
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
